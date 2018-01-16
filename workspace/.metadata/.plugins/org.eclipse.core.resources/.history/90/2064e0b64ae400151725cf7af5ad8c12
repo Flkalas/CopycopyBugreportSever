@@ -1,0 +1,36 @@
+package test;
+
+import java.util.Scanner;
+
+class MyProgram {
+	public static void main(String []args) {
+		//System.out.println(methodName());
+
+		
+	}
+	
+	
+	public static String methodName() {
+		System.out.println("Press Enter to continue");
+		try{System.in.read();}
+		catch(Exception e){}
+		
+		long start = System.currentTimeMillis();
+		System.out.println("Hello World");
+		int message;
+		Scanner scan = new Scanner(System.in);   
+	        
+		System.out.println("input:");
+	        
+		message = scan.nextInt();
+		System.out.println(message);
+		
+		long end = System.currentTimeMillis();
+		System.out.println(end +" "+ start);
+		System.out.println( "run time: " + ( end - start )/1000.0 );
+		
+		scan.close();
+		
+		return "Fantastic Park";
+	}
+}

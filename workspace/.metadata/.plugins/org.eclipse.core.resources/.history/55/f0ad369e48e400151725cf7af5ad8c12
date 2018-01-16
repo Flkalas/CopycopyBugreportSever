@@ -1,0 +1,22 @@
+package test;
+
+import java.util.Scanner;
+
+class MyProgram {
+	public static void main(String []args) {
+		long start = System.currentTimeMillis();
+		System.out.println("Hello World");
+		int message;
+		Scanner scan = new Scanner(System.in);   
+	        
+		System.out.println("input:");
+	        
+		message = scan.nextInt();
+		System.out.println(message);
+		
+		long end = System.currentTimeMillis();
+		System.out.println( "실행 시간 : " + ( end - start )/1000.0 );
+		
+		scan.close();
+	}
+}

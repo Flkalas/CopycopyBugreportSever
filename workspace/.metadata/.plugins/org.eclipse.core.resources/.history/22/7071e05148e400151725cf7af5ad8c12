@@ -1,0 +1,20 @@
+package test;
+
+import java.util.Scanner;
+
+class MyProgram {
+	public static void main(String []args) {
+		System.out.println("Hello World");
+		String message;
+		Scanner scan = new Scanner(System.in);   
+	        
+		System.out.println("input:");
+	        
+		message = scan.nextInt();
+		
+		
+		
+		
+		scan.close();
+	}
+}

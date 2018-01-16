@@ -1,0 +1,80 @@
+package test;
+
+import java.util.Scanner;
+import java.util.Random;
+
+class Problem
+{
+	String strName;
+	String strAddr;
+	int nScore;
+}
+
+class MyProgram {
+	public static void main(String []args) {
+		//time check
+		//System.out.println(methodName());
+		
+		
+		for (int i = 0; i < 10;i++){		
+			int randomNumber = getRandomNumber();
+			System.out.print(randomNumber);
+			
+			boolean problemType =getRandomProblemType();
+			//System.out.println(problemType);
+			if(problemType){
+				System.out.print("x");
+			}
+			else{
+				System.out.print("+");
+			}
+			
+			
+			int randomNumber2 = getRandomNumber();
+			System.out.print(randomNumber2);
+			System.out.print("=");
+			System.out.print("\n");
+		}
+		
+	}
+		
+	public static int getRandomNumber() {
+		Random oRandom = new Random();
+		return oRandom.nextInt(9)+1;
+	}
+	
+	public static boolean getRandomProblemType() {
+		Random oRandom = new Random();
+		return oRandom.nextBoolean();
+	}
+	
+	public static boolean getRandomProblem() {
+		Random oRandom = new Random();
+		return oRandom.nextBoolean();
+	}
+		
+	public static String methodName() {
+		
+		System.out.println("Press Enter to continue");
+		try{System.in.read();}
+		catch(Exception e){}
+		
+		long start = System.currentTimeMillis();
+		System.out.println("Hello World");
+		int message;
+		Scanner scan = new Scanner(System.in);   
+	        
+		System.out.println("input:");
+	        
+		message = scan.nextInt();
+		System.out.println(message);
+		
+		long end = System.currentTimeMillis();
+		System.out.println(end +" "+ start);
+		System.out.println( "run time: " + ( end - start )/1000.0 );
+		
+		scan.close();
+		
+		return "Fantastic Park";
+	}
+}
